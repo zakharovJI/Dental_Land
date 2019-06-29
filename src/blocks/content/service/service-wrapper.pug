@@ -1,0 +1,18 @@
+include service-item/service-item
+-
+    var services = [
+        { icon: '../assets/icons/terap.png', title: 'Терапевтическое лечение'},
+        { icon: '../assets/icons/hirurg.png', title: 'Хирургическое лечение'},
+        { icon: '../assets/icons/orthop.png', title: 'Ортопедичесоке лечение'},
+        { icon: '../assets/icons/estet.png', title: 'Эстетическая стоматология'},
+        { icon: '../assets/icons/parad.png', title: 'Парадонтология'},
+        { icon: '../assets/icons/orthod.png', title: 'Ортодонтия'},
+    ]
+
++b('service-wrapper', {})
+    +e('title', {}, 'h1')= 'УСЛУГИ'
+    +b('service')
+        each item in services 
+            +service-item(item.icon, item.title)
+    +e('happy-boy', {}, 'img')(src='../assets/images/happy-boy.png')
+

@@ -1,0 +1,14 @@
+.switcher {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50px;
+    height: 427px;
+    bottom: 710px;
+    left: 1030px;
+}
+.switcher__dots-wrapper {
+    padding: 20px 0;
+}

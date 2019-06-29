@@ -1,0 +1,32 @@
+.service-wrapper {
+    width: 1028px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0 0 100px;
+    margin-top: 200px;
+}
+
+.service-wrapper__title {
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -.5px;
+    margin-bottom: 30px;
+}
+
+.service {
+    display: flex;
+    // flex-direction: row;
+    flex-flow: row wrap;
+    width: 900px;
+}
+
+.service-wrapper__happy-boy {
+    width: 441px;
+    height: 497px;
+    bottom: 510px;
+    right: 280px;
+    position: relative;
+    z-index: -1;
+}
+

@@ -1,0 +1,12 @@
++b('slider-wrapper')
+        +b('slider-wrapper__button', {p:0}, 'button')
+                +e('text', {}, 'p')= 'Записаться на прием'
+        +e('image', {}, 'div')
+                +e('item fade', {}, 'img')(src='../assets/images/smile.png')
+                +e('item item--hidden fade', {}, 'img')(src='../assets/images/smile.png')
+                +e('item item--hidden fade', {}, 'img')(src='../assets/images/smile.png')
+                +e('item item--hidden fade', {}, 'img')(src='../assets/images/smile.png')
+        +e('switcher', {}, 'div')
+        include contacts/contacts
+        include image-mini/image-mini
+        include switcher/switcher

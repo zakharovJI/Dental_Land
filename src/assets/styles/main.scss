@@ -1,0 +1,31 @@
+@import "../../blocks/header/header.scss";
+@import "../../blocks/header/menu-item/menu-item.scss";
+@import "../../blocks/content/content.scss";
+@import "../../blocks/content/slider-wrapper/slider-wrapper.scss";
+@import "../../blocks/content/slider-wrapper/image-mini/image-mini.scss";
+@import "../../blocks/content/slider-wrapper/contacts/contacts.scss";
+@import "../../blocks/content/slider-wrapper/switcher/switcher.scss";
+@import "../../blocks/content/warranty/warranty.scss";
+@import "../../blocks/content/warranty/warranty-item/warranty-item.scss";
+@import "../../blocks/content/description/description.scss";
+@import "../../blocks/content/service/service-wrapper.scss";
+@import "../../blocks/content/service/service-item/service-item.scss";
+@import "../../blocks/content/feedback/feedback.scss";
+@import "../../blocks/content/contacts/contacts.scss";
+@import "../../blocks/footer/footer.scss";
+@import "../../blocks/footer/footer-item/footer-item.scss";
+
+@import "../../assets/fonts/Gilroy/stylesheet.css";
+@import "../../assets/fonts/FuturaPT/stylesheet.css";
+@import "../../assets/fonts/GothamPro/stylesheet.css";
+
+
+.app {
+    font-family: "Gilroy";
+    display: grid;
+    height: $main-height;
+    // width: max-contentl
+    justify-content: center;
+    color: $main-font-color;
+}
+

@@ -1,0 +1,45 @@
+@import "../../assets/styles/variables.scss";
+
+.footer {
+    display: flex;
+    align-items: center;
+    height: 186px;
+    width: 1028px;
+    background-color: #f7f7f7;
+    margin-top: -15px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.footer-menu-wrapper {
+    width: 850px;
+}
+
+.footer-menu {
+    font-family: "Futura PT";
+    display: flex;
+    position: relative;
+    top: 10%;
+    height: max-content;
+    flex-direction: row;
+    justify-content: center;
+    width: 785px;
+}
+
+.disclaimer {
+    width: 1028px;
+    font-family: 'Gotham Pro';
+    color: $main-font-color;
+    font-size: 9px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.disclaimer__text {
+    padding: 20px 250px 0 250px;
+}

@@ -1,0 +1,9 @@
+
+
+mixin menu-item(name, flag)
+    +e('item', {}, 'label')
+        if flag===true
+            +e('radio', {p:'item'}, 'input')(type="radio" name="header-tabs" hidden checked)
+        else
+            +e('radio', {p:'item'}, 'input')(type="radio" name="header-tabs" hidden)
+        +e('tab', {p:'item'}, 'span')= name

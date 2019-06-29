@@ -1,0 +1,17 @@
+include footer-item/footer-item.pug
+
+- var tabs = ['главная', `о нас`, 'услуги', 'акции', 'цены', 'отзывы', 'контакты']
+
+
++b('footer', {}, 'div')
+    +b('footer-wrapper', {})
+        +b('footer-menu-wrapper', {p:0})
+            +b('footer-menu', {}, 'menu')
+                each item, i in tabs
+                    if i===0
+                        +footer-item(item, true)
+                    else
+                        +footer-item(item, false)
+        +e('icon', {}, 'img')(src='../assets/icons/tooth-small.png')
++b('disclaimer', {}, 'div') 
+    +e('text', {}, 'p')= "Все права защищены. Полное или частичное копирование материалов Сайта в коммерческих целях разрешено только с письменного разрешения владельца Сайта. В случае обнаружения нарушений, виновные лица могут быть привлечены к ответственности в соответствии с действующим законодательством Российской Федерации."

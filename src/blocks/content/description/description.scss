@@ -1,0 +1,66 @@
+@import "../../../assets/styles/variables.scss";
+
+.description {
+    background-color: #f7f7f7;
+    width: 1028px;
+    height: 540px;
+    color: #2d2d2d;
+    margin-top: -24px;
+    color: $main-font-color;
+}
+
+.description__title {
+    font-family: 'Gilroy';
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: -.5px;
+    padding: 60px 0 0 100px;
+    width: 300px;
+    margin-bottom: 0px;
+}
+
+.info-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    padding: 0px 0 0 100px;
+}
+
+
+.info-wrapper__info {
+    font-family: "Gotham Pro";
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 80px;
+    width: 620px;
+}
+
+.info-wrapper__logo {
+    width: 130px;
+    height: 157px;
+    padding-top: 30px;
+}
+
+.images-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    margin-top: 50px;
+    padding: 0 auto;
+}
+
+.images-wrapper__item {
+    width: 200px;
+    height: 110px;
+    margin: 0 8px;
+    transition: all .15s linear;
+}
+
+.item--big {
+    width: 330px;
+    height: 190px;
+    margin: 0 15px;
+}

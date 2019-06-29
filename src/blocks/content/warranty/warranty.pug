@@ -1,0 +1,9 @@
+include warranty-item/warranty-item.pug
+
++b('warranty')
+    +e('title', {}, 'h1')= 'ВЫБИРАЯ НАС МЫ ГАРАНТИРУЕМ'
+    +b('descriptions', {}, 'div')
+        +warranty-item('../assets/icons/settings.png', 'современные технологии', 'Современные технологии  клиники позволяют проводить  лечение без боли')
+        +warranty-item('../assets/icons/quality.png', 'качество лечения', 'Наши специалисты помогут в любой ситуации')
+        +warranty-item('../assets/icons/service.png', 'полный спектр обслуживания', 'Наши клиники оказывают  полный спектр  стоматологических услуг')
+        +warranty-item('../assets/icons/payment.png', 'удобная оплата', 'Мы принимаем - наличные  или банковские карты')

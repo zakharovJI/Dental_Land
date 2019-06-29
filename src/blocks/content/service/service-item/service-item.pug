@@ -1,0 +1,4 @@
+mixin service-item(img, title)
+    +b('service-item', {})
+        +e('logo', {}, 'img')(src=img)
+        +e('title', {}, 'h2')= title

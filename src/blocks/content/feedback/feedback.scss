@@ -1,0 +1,91 @@
+.feedback {
+    width: 1028px;
+    height: 443px;
+    background-image: url('../../assets/images/feedback.png');
+    background-repeat: no-repeat;
+    margin-top: 80px;
+}
+
+.feedback__title {
+    font-family: 'Gilroy';
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: -.5px;
+    padding: 60px 0 0 100px;
+    // width: 300px;
+    margin-bottom: 30px;
+}
+
+.feedback__info {
+    font-family: "Gotham Pro";
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -.5px;
+    width: 360px;
+    padding-left: 100px;
+    margin-bottom: 60px;
+}
+
+.feedback__text-input {
+    width: 232px;
+    height: 32px;
+    font-family: "Gotham Pro";
+    font-size: 14px;
+    line-height: 34px;
+    letter-spacing: 1px;
+    background: none;
+    border: 1px solid #fff;
+    margin-right: 20px;
+    outline: none;
+    text-align: left;
+    padding-left: 20px;
+    &::placeholder {
+        color: #2d6b5f;
+        text-align: left;
+    }
+}
+
+.data-wrapper {
+    padding-left: 100px; 
+}
+
+.feedback__done-btn {
+    display: flex;
+    width: 253px;
+    height: 36px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    &:hover {
+        .done-btn__text {
+            padding-right: 80px;
+        }
+    }
+    &:focus {
+        outline: none;
+        
+    }
+}
+
+
+
+.done-btn__text {
+    font-family: "Gotham Pro";
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    padding-left: 20px;
+    padding-right: 60px;
+    transition: all .25s ease-out;
+    margin: 0;
+}
+
+
+.done-btn__arrow {
+    width: 80px;
+    height: 16px;
+}

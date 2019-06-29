@@ -1,0 +1,55 @@
+
+.menu {
+    font-family: "Futura PT";
+    display: flex;
+    position: relative;
+    top: 10%;
+    height: max-content;
+    width: 460px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu__item {
+    background: none;
+    border: none;
+    margin: 0 20px;
+    &:hover {
+        color: $hover-font-color;
+    }
+    
+}
+
+.item__tab {
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    // &:before{
+        
+    // }    
+}
+
+.item__tab:before {
+    content: "";
+    display: block;
+    position: relative;
+    left: 43%;
+    width: 6px;
+    border-radius: 50%;
+    height: 6px;
+    background-color: #fff;
+    // margin-top: 6px;
+    margin-bottom: 5px;
+}
+
+.item__radio:checked {
+    + .item__tab {
+        color: $hover-font-color;
+        &::before {
+            background-color: $hover-font-color;
+        }
+    }
+
+}
+
+

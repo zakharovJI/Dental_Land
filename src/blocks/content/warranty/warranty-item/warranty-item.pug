@@ -1,0 +1,6 @@
+mixin warranty-item(icon, title, desc)
+    +b('descriptions__item', {}, 'div')
+        +e('icon-wrapper', {}, 'div')
+            +e('icon', {}, 'img')(src=icon)
+        +e('title', {}, 'h2')= title
+        +e('description', {}, 'p')= desc

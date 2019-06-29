@@ -1,0 +1,18 @@
+include menu-item/menu-item.pug
+//- include ../../assets/icons/tooth.png
+
+//- -var tooth = '../../assets/icons/tooth.png'
+- var tabs = ['ГЛАВНАЯ', `О НАС`, 'УСЛУГИ', 'АКЦИИ', 'ЦЕНЫ', 'ОТЗЫВЫ', 'КОНТАКТЫ']
+
++b('header')
+    +b('title-wrapper', {p:0})
+        +e('logo', {}, 'img')(src='../assets/icons/tooth.png')
+        +e('title', {}, 'h1')= 'ДЭНТА ЛЭНД'
+    +b('menu-wrapper', {p:0})
+        +b('menu', {}, 'menu')
+            each item, i in tabs
+                if i===0
+                    +menu-item(item, true, 'header')
+                else
+                    +menu-item(item, false, 'header')
+

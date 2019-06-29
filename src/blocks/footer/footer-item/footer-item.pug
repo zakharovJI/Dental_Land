@@ -1,0 +1,7 @@
+mixin footer-item(name, flag)
+    +e('footer-item', {}, 'label')
+        if flag===true
+            +e('radio', {p:'footer-item'}, 'input')(type="radio" name="footer-tabs" hidden checked)
+        else
+            +e('radio', {p:'footer-item'}, 'input')(type="radio" name="footer-tabs" hidden)
+        +e('tab', {p:'footer-item'}, 'span')= name
