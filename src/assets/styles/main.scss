@@ -8,6 +8,8 @@
 @import "../../blocks/content/warranty/warranty.scss";
 @import "../../blocks/content/warranty/warranty-item/warranty-item.scss";
 @import "../../blocks/content/description/description.scss";
+@import "../../blocks/content/smiles/smiles.scss";
+@import "../../blocks/content/smiles/description-item/description-item.scss";
 @import "../../blocks/content/service/service-wrapper.scss";
 @import "../../blocks/content/service/service-item/service-item.scss";
 @import "../../blocks/content/feedback/feedback.scss";
@@ -23,9 +25,21 @@
 .app {
     font-family: "Gilroy";
     display: grid;
-    height: $main-height;
-    // width: max-contentl
-    justify-content: center;
     color: $main-font-color;
+    width: 1108px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding-left: 100px;
+}
+
+
+@media only screen and (max-width: 1250px) {
+    .app {
+        display: block;
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        padding: 0;
+    }
 }
 

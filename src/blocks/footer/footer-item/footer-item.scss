@@ -17,23 +17,19 @@
     letter-spacing: 1px;
     font-family: "Futura PT";
     white-space: nowrap;
-    // &:before{
-        
-    // }    
-}
-
-.footer-item__tab:before {
-    content: "";
-    display: block;
-    position: relative;
-    left: -20px;
-    top: 27px;
-    width: 6px;
-    border-radius: 50%;
-    height: 6px;
-    background-color: #f7f7f7;
-    // margin-top: 6px;
-    margin-bottom: 5px;
+    &:before{
+        content: "";
+        display: block;
+        position: relative;
+        left: -20px;
+        top: 27px;
+        width: 6px;
+        border-radius: 50%;
+        height: 6px;
+        background-color: #f7f7f7;
+        // margin-top: 6px;
+        margin-bottom: 5px;
+    }
 }
 
 .footer-item__radio:checked {
@@ -46,4 +42,19 @@
 
 }
 
+@media only screen and (max-width: 1010px) {
+
+    .footer-item__tab {
+        font-size: 24px;
+        line-height: 60px;
+        letter-spacing: 1px;
+
+        &::before {
+            left: -30px;
+            top: 42px;
+            width: 8px;
+            height: 8px;
+        }
+    }
+}
 

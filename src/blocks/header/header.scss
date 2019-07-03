@@ -5,6 +5,14 @@
     flex-direction: row;
     width: $main-height;
     height: 90px;
+    padding: 0 15px 0 15px;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: $main-height;
+    height: 90px;
     background-color: #fff;
     padding: 0 15px 0 15px;
 }
@@ -12,17 +20,22 @@
 .title-wrapper {
     display: flex;
     flex-direction: row;
-    height: 100%;
+    height: 70px;
     align-items: center;
     width: max-content;
     margin-left: 10px;
 }
 
+.menu-wrapper {
+    display: block;
+    animation: none;
+}
+
 .header__logo {
-    height: 100%;
+    height: 90px;
     width: 70px;
-    // background-image: url('../../assets/icons/tooth.png');
-    // background-repeat: no-repeat;
+    background-image: url('../../assets/icons/tooth.png');
+    background-repeat: no-repeat;
 }
 
 .header__title {
@@ -33,3 +46,214 @@
     letter-spacing: -1px;
     margin: 0 110px 0 30px;
 }
+
+.menu-wrapper__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 196px;
+    height: 36px;
+    position: relative;
+    background: none;
+    border: 1px solid $button-color;
+    color: $button-color;
+    transform: rotate(-90deg);
+    justify-content: center;
+    top: 240px;
+    right: 580px;
+    &:hover {
+        background-color: $button-color;
+        color: #fff;
+    }
+    &:focus {
+        outline: none;
+    }
+    &:active {
+        outline: none;
+        background-color: #204d44;
+        color: #fff;
+    }
+}
+
+.menu-wrapper__button__text {
+    font-family: "Gotham Pro";
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.menu-toggler {
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+
+@media only screen and (min-width: 1093px) {
+    .menu-toggler {
+        right: 0;
+        left: 1053px;
+    }
+}
+
+
+
+@media only screen and (min-width: 1250px) {
+    .menu-wrapper {
+        display: block !important;
+    }
+}
+
+    
+
+@media only screen and (max-width: 1250px) {
+    .header {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        height: 70px;
+        width: 100vw;
+    }
+
+    .header-wrapper {
+        position: absolute;
+        height: 90px;
+        width: 100vw;
+        left: 0;
+        
+    }
+
+    .header--menu-show {
+        height: 100vh;
+    }
+
+
+
+    .menu-wrapper {
+        width: 100vw;
+        z-index: 2;
+        background-color: #fff;
+        // ???
+        height: 100vh;
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        // max-height: 560px;
+        overflow-x: hidden;
+        position: absolute;
+        left: 100vw;
+        
+    }
+
+    .menu-showed {
+        animation: menu-show .5s linear;
+        left: 0;
+    }
+
+    .menu-hidden {
+        animation: menu-hide .5s linear;
+        left: 100vw;
+    }
+
+    .title-wrapper {
+        // visibility: collapse;
+        position: absolute;
+        left: 15px;
+
+    }
+    // width: 100vw;
+    // height: 70px;
+    // left: 0;
+    // position: absolute;
+    // background-color: #fff;
+
+    .hidden {
+        animation: title-hide .5s linear;
+        // display: none;
+        left: -150px;
+    }
+
+    .showed {
+        // display: flex;
+        left: 15px;
+        animation: title-show .5s linear;
+    }
+
+    .slider-wrapper__button {
+        transform: none;
+        top: 0;
+        right: 0;
+        margin-left: 50px;
+        margin-bottom: 30px;
+    }
+
+    .menu-toggler {
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: 50px;
+        top: 35px;
+        z-index: 2;
+        animation: toggler-hide .5s linear;
+        background-color: #fff;
+    }
+
+    .menu-toggler--close {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        width: 20px;
+        height: 20px;
+        right: 50px;
+        top: 35px;
+        z-index: 2;
+        animation: toggler-hide .5s linear;
+    }
+
+    .header__logo {
+        width: 30px;
+        height: 46px;
+        margin-top: -10px;  
+        background-image: url('../../assets/icons/tooth-mobile.png');
+    }
+
+    .header__title {
+        font-size: 12px;
+        margin-left: 10px;
+        line-height: 14px;
+        letter-spacing: -.5px;
+    }
+
+    @keyframes menu-show {
+        from {left: 100vw}
+        to {left: 0;}
+    }
+
+    @keyframes menu-hide {
+        from {left: 0}
+        to {left: 100vw;}
+    }
+
+    @keyframes title-hide {
+        from {left: 15px}
+        to {left: -150px;}
+    }
+
+    @keyframes title-show {
+        from {left: -150px}
+        to {left: 15px;}
+    }
+
+    @keyframes toggler-show {
+        from {opacity: 1;}
+        to {opacity: 0;}
+    }
+
+    @keyframes toggler-hide {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    
+}
+

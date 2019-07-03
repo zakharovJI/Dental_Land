@@ -1,5 +1,9 @@
 @import '../../../assets/styles/variables.scss';
 
+// @function get-left() {
+//     @return 
+// }
+
 .slider-wrapper {
     width: 100%;
     height: 550px;
@@ -35,41 +39,30 @@
     to {opacity: 1}
 }
 
-.slider-wrapper__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 196px;
-    height: 36px;
-    position: absolute;
-    background: none;
-    border: 1px solid $button-color;
-    color: $button-color;
-    transform: rotate(-90deg);
-    justify-content: center;
-    /* z-index: 10; */
-    top: 320px;
-    left: 550px;
-    &:hover {
-        background-color: $button-color;
-        color: #fff;
+@media only screen and (max-width: 1084px) {
+
+    .slider-wrapper__item {
+        max-width: 1028px;
+        height: 427px;
     }
-    &:focus {
-        outline: none;
+
+    .slider-wrapper__image {
+        display: flex;
+        justify-content: center;
+        overflow-x: hidden;
+        width: 90vw;
+        margin: 0 auto;
     }
-    &:active {
-        outline: none;
-        background-color: #204d44;
-        color: #fff;
-    }
+
 }
 
-.slider-wrapper__text {
-    font-family: "Gotham Pro";
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 1px;
-    margin: 0;
-}
+// @media only screen and (max-width: 1250px) {
+
+//     .slider-wrapper__image {
+//     }
+
+
+
+// }
 
 

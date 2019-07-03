@@ -12,3 +12,21 @@
 .switcher__dots-wrapper {
     padding: 20px 0;
 }
+
+@media only screen and (max-width: 1250px) {
+
+    .switcher {
+        left: 1055px;
+    }
+
+}
+
+@media only screen and (max-width: 1110px) {
+    .switcher {
+        margin: 0 auto;
+        transform: rotate(-90deg);
+        bottom: 390px;
+        left: 0;
+    }
+
+}

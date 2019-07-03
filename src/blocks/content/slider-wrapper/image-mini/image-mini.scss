@@ -57,3 +57,45 @@ $main-font-color: #2d2d2d;
     margin-top: 5px;
     transition: all .5s ease-in-out
 }
+
+@media only screen and (max-width: 1250px) {
+    .image-mini {
+        left: 5vw;
+    }
+}
+
+@media only screen and (max-width: 1110px) {
+
+    .image-mini {
+        left: -1px;
+        margin: 0 auto;
+        width: 260px;
+        height: 150px;
+        background-position: bottom right;
+        &:hover {
+            .image-mini__arrow-svg {
+                margin-left: 150px;
+            }
+        }
+        &:active {
+            .image-mini__arrow-svg {
+                margin-left: 150px;
+            }
+        }
+    }
+
+    .image-mini__title {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        margin-top: -10px;
+    }
+
+    .image-mini__description {
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        padding-right: 20px;
+    }
+
+}

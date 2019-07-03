@@ -1,38 +1,42 @@
 
 +b('contacts', {})
-    +e('title', {}, 'h1')= 'КОНТАКТЫ'
+    +b('contacts__title-wrapper', {p:0})
+        +e('title', {}, 'h1')= 'КОНТАКТЫ'
+        +e('logo', {}, 'img')(src='../assets/icons/tooth-small.png')
     +b('contacts-wrapper')
         +b('unsocial', {}, 'div')
-            +e('item', {}, 'div')
-                +e('icon', {}, 'div')
-                    include ../../../assets/icons/location.svg
-                +e('info', {}, 'p')= 'пр. Чекистов, 22'
-            +e('item', {}, 'div')
-                +e('icon', {}, 'div')
-                    include ../../../assets/icons/location.svg
-                +e('info', {}, 'p')= 'ул. Старокубанская, 32'
-            +e('item', {}, 'div')
-                +e('icon', {}, 'div')
-                    include ../../../assets/icons/phone.svg
-                +e('info', 'number', {}, 'p')= '8 (861) 273 61 42 8 918 48 43 579'
-            +e('item', {}, 'div')
-                +e('icon', {}, 'div')
-                    include ../../../assets/icons/phone.svg
-                +e('info', {}, 'p')= '8 903 45 96 540'
-            +e('item', {}, 'div')
-                +e('icon', {}, 'div')
-                    include ../../../assets/icons/mail.svg
-                +e('info', {}, 'p')= 'dental_land@mail.ru'
-            +e('item', {}, 'div')
-                +e('icon', {}, 'div')
-                    include ../../../assets/icons/mail.svg
-                +e('info', {}, 'p')= 'dental_land@mail.ru'
+            +b('left', {p:0})
+                +e('item', {}, 'div')
+                    +e('icon', {}, 'div')
+                        include ../../../assets/icons/location.svg
+                    +e('info', {}, 'p')= 'пр. Чекистов, 22'
+                +e('item', {}, 'div')
+                    +e('icon', {}, 'div')
+                        include ../../../assets/icons/phone.svg
+                    +e('info', 'number', {}, 'p')= '8 (861) 273 61 42 8 918 48 43 579'
+                +e('item', {}, 'div')
+                    +e('icon', {}, 'div')
+                        include ../../../assets/icons/mail.svg
+                    +e('info', {}, 'p')= 'dental_land@mail.ru'
+                +e('button', {}, 'button')
+                    +e('text', {p:'button'}, 'p')= 'Показать на карте '
+            +b('right', {p:0})
+                +e('item', {}, 'div')
+                    +e('icon', {}, 'div')
+                        include ../../../assets/icons/location.svg
+                    +e('info', {}, 'p')= 'ул. Старокубанская, 32'
+                +e('item', {}, 'div')
+                    +e('icon', {}, 'div')
+                        include ../../../assets/icons/phone.svg
+                    +e('info', {}, 'p')= '8 903 45 96 540'
+                +e('item', {}, 'div')
+                    +e('icon', {}, 'div')
+                        include ../../../assets/icons/mail.svg
+                    +e('info', {}, 'p')= 'dental_land@mail.ru'
+                +e('button', {}, 'button')
+                    +e('text', {p:'button'}, 'p')= 'Показать на карте '
         +b('social', {}, 'div')
             +e('item', {}, 'img')(src='../assets/icons/vk.png')
             +e('item', {}, 'img')(src='../assets/icons/fb.png')
             +e('item', {}, 'img')(src='../assets/icons/ig.png')
-    +b('navigation', {})
-        +e('button', {}, 'button')
-            +e('text', {p:'button'}, 'p')= 'Показать на карте '
-        +e('button', {}, 'button')
-            +e('text', {p:'button'}, 'p')= 'Показать на карте '
+    //- +b('navigation', {})

@@ -1,0 +1,36 @@
+.smiles {
+    display: none;
+}
+
+@media only screen and (max-width: 1010px) {
+
+    .smiles {
+        display: block;
+        height: max-content;
+        text-align: center;
+        width: 90vw;
+        box-shadow: 4px 4px 25px rgba(0,0,0,.3);
+        width: 95vw;
+        margin: 50px auto 0 auto;
+        padding-bottom: 50px;
+    } 
+
+    .smiles__title {
+        text-transform: uppercase;
+        font-family: 'Gotham Pro';
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -.5px; 
+        padding-top: 40px;
+    }
+
+    .smiles__descriptions {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: left;
+    }
+
+}

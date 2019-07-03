@@ -1,0 +1,15 @@
+include description-item/description-item
+
+- 
+    var smiles = [
+        {image: '../assets/images/smiles-1.png', text: 'Добавляет  обаятельность'},
+        {image: '../assets/images/smiles-1.png', text: 'Улучшает настроение'},
+        {image: '../assets/images/smiles-3.png', text: 'Добавляет увренности'},
+        {image: '../assets/images/smiles-4.png', text: 'Поднимает имидж и жизненный успех'}
+    ]
+
++b('smiles', {})
+    +e('title', {}, 'h1')= 'создаем улыбки,  которые  привлекательней  макияжа'
+    +e('descriptions', {})
+        each item in smiles
+            +description-item(item.image, item.text)

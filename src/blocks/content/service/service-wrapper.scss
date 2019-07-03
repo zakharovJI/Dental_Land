@@ -24,9 +24,40 @@
 .service-wrapper__happy-boy {
     width: 441px;
     height: 497px;
-    bottom: 510px;
-    right: 280px;
-    position: relative;
+    position: absolute;
     z-index: -1;
+    margin-left: -280px;
+    margin-top: -20px;
 }
 
+
+@media only screen and (max-width: 1010px) {
+
+    .service-wrapper {
+        min-height: 300px;
+        width: max-content;
+        height: 50vw;
+        margin-top: 50px;
+        min-height: 300px;
+        height: max-content;
+        padding: 0;
+    }
+
+    .service {
+        width: 100vw;
+        justify-content: center;
+    }
+
+    .service-wrapper__title {
+        font-size: 20px;
+        line-height: 48px;
+        letter-spacing: -.5px;
+        padding: 40px 0 0 20px;
+
+    }
+
+    .service-wrapper__happy-boy {
+        margin-left: -250px;
+        margin-top: 0;
+    }
+}

@@ -5,14 +5,24 @@ include menu-item/menu-item.pug
 - var tabs = ['ГЛАВНАЯ', `О НАС`, 'УСЛУГИ', 'АКЦИИ', 'ЦЕНЫ', 'ОТЗЫВЫ', 'КОНТАКТЫ']
 
 +b('header')
-    +b('title-wrapper', {p:0})
-        +e('logo', {}, 'img')(src='../assets/icons/tooth.png')
-        +e('title', {}, 'h1')= 'ДЭНТА ЛЭНД'
-    +b('menu-wrapper', {p:0})
-        +b('menu', {}, 'menu')
-            each item, i in tabs
-                if i===0
-                    +menu-item(item, true, 'header')
-                else
-                    +menu-item(item, false, 'header')
+    +b('header-wrapper', {p: 0})
+        +b('title-wrapper', {p:0})
+            //- +e('logo', {}, 'img')(src='../assets/icons/tooth.png')
+            +e('logo', {}, 'div')
+            +e('title', {}, 'h1')= 'ДЭНТА ЛЭНД'
+        +b('menu-wrapper', {p:0})
+            +b('menu', {}, 'menu')
+                each item, i in tabs
+                    if i===0
+                        +menu-item(item, true, 'header')
+                    else
+                        +menu-item(item, false, 'header')
+        
+            +b('menu-wrapper__button', {}, 'button')
+                    +e('text', {}, 'p')= 'Записаться на прием'
+    +b('menu-toggler', {}, 'div')
+        include ../../assets/icons/menu-toggler.svg
+    +b('menu-toggler--close', {}, 'div')
+        include ../../assets/icons/menu-toggler--close.svg
+
 

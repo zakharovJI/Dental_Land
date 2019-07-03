@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for(let i = 0; i < $arrows.length; i++) {
         $arrows[i].onclick = () => {
             console.log('hkjhkjhs')
-            $dots[dot_selected].style.r = '2'
+            $dots[dot_selected].setAttribute('r', '2');
             $dots[dot_selected].style.stroke = '#c4c4c4';
             $dots[dot_selected].style.fill = '#c4c4c4';
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (i === 0) {
                 if (dot_selected !== 0) {
-                    $dots[dot_selected - 1].style.r = '7';
+                    $dots[dot_selected - 1].setAttribute('r', '7');
                     $dots[dot_selected - 1].style.stroke = '#2d6b5f';
                     $dots[dot_selected - 1].style.fill = '#2d6b5f' ;
                     $switcher_images[dot_selected - 1].style.display = 'block';
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     dot_selected -= 1;
                 }
                 else {
-                    $dots[$dots.length - 1].style.r = '7';
+                    $dots[$dots.length - 1].setAttribute('r', '7');
                     $dots[$dots.length - 1].style.stroke = '#2d6b5f';
                     $dots[$dots.length - 1].style.fill = '#2d6b5f';
                     $switcher_images[$dots.length - 1].style.display = 'block';
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             } else if (i === 1) {
                 if (dot_selected !== $dots.length - 1) {
-                    $dots[dot_selected + 1].style.r = '7';
+                    $dots[dot_selected + 1].setAttribute('r', '7');
                     $dots[dot_selected + 1].style.stroke = '#2d6b5f';
                     $dots[dot_selected + 1].style.fill = '#2d6b5f';
                     $switcher_images[dot_selected + 1].style.display = 'block';
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     dot_selected += 1;
                 }
                 else {
-                    $dots[0].style.r = '7';
+                    $dots[0].setAttribute('r', '7');
                     $dots[0].style.stroke = '#2d6b5f';
                     $dots[0].style.fill = '#2d6b5f';
                     $switcher_images[0].style.display = 'block';
@@ -85,4 +85,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
         menu_item_selected = i;
     }
+
+    let $menu_toggler = document.getElementsByClassName('menu-toggler')[0];
+    let $menu_toggler__close = document.getElementsByClassName('menu-toggler--close')[0];
+    let $header = document.getElementsByClassName('header')[0];
+    console.log($menu_toggler)
+
+    let menu_collapsed = true;
+    $menu_toggler.onclick = () => {
+        console.log('dsfdsf')
+        if (menu_collapsed) {
+            $menu_toggler__close.style.display = 'block';
+            $menu_toggler.style.display = 'none';
+            $header.classList.toggle('header--menu-show');
+            // $header.style.backgroundColor = 'rgba(0,0,0,0)';
+            document.getElementsByClassName('title-wrapper')[0].className = 'title-wrapper hidden'
+            document.getElementsByClassName('menu-wrapper')[0].className.replace('menu-showed', '');
+            document.getElementsByClassName('menu-wrapper')[0].className = 'menu-wrapper menu-showed';
+        }
+
+        menu_collapsed = !menu_collapsed;
+    }
+
+    $menu_toggler__close.onclick = () => {
+        if (!menu_collapsed) {
+            $menu_toggler__close.style.display = 'none';
+            $menu_toggler.style.display = 'block';
+            $header.classList.toggle('header--menu-show');
+            // $header.style.backgroundColor = '#fff';
+            document.getElementsByClassName('title-wrapper')[0].className = 'title-wrapper showed';
+            document.getElementsByClassName('menu-wrapper')[0].className = 'menu-wrapper menu-hidden';
+        }
+
+        menu_collapsed = !menu_collapsed;
+    }
+
+
+
+
+
 });

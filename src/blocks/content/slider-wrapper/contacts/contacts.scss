@@ -32,3 +32,27 @@ $font-color: #7b7b7b;
     color: $font-color;
     padding-left: 10px;
 }
+
+
+
+@media only screen and (max-width: 1110px) {
+
+    .slider-wrapper__contacts {
+        left: 0;
+        margin: 0 auto;
+        top: 70px;
+        width: 292px
+    }
+
+    .item__text {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -.5px
+    }
+
+    .item__icon {
+        width: 25px;
+        height: 25px;
+    }
+
+}

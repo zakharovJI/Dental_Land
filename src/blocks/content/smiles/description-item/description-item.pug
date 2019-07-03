@@ -1,0 +1,4 @@
+mixin description-item(image, text)
+    +e('item', {}, 'div')
+        +e('image', {}, 'img')(src=image)
+        +e('text', {}, 'h2')= text

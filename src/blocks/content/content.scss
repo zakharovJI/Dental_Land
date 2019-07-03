@@ -1,5 +1,12 @@
 .content {
-    height: 3400px;
-    width: 100%;
+    height: max-content;
     margin-bottom: 95px;
+    width: 100%;
+    // overflow-x: hidden;
+}
+
+@media only screen and (max-width: 1250px) {
+    .content {
+        margin-top: 80px;
+    }
 }

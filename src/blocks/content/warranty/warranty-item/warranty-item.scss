@@ -18,3 +18,17 @@
     letter-spacing: 1px;
     padding-right: 10px;
 }
+
+@media only screen and (max-width: 1010px) {
+
+    .descriptions__item__title {
+        padding: 0;
+        width: 130px;
+    }
+
+    .descriptions__item__description {
+        padding: 0;
+        width: 200px;
+    }
+
+}
