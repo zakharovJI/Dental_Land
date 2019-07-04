@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=05cd71a9-150e-42cc-aafa-9ff1d7126441&amp;lang=ru_RU" type="text/javascript"></script>
     <title>Дентал Лэнд</title>
-  <link href="main.css?d4acdd1fc67fbd33cf64" rel="stylesheet"></head>
+  <link href="main.css?4f69cff78e57e53f842f" rel="stylesheet"></head>
   <body>
     <div class="app">
       <div class="header">
@@ -60,17 +61,12 @@
             </button>
           </div>
         </div>
-        <div class="menu-toggler"><svg xmlns="http://www.w3.org/2000/svg" id="menu-toggler-svg" viewBox="0 0 20 20" stroke="black">
-    <line x1="1" y1="1" x2="19" y2="1" stroke-width="3"></line>
-    <line x1="1" y1="10" x2="19" y2="10" stroke-width="3"></line>
-    <line x1="1" y1="19" x2="19" y2="19" stroke-width="3"></line>
-</svg>
-        </div>
-        <div class="menu-toggler--close"><svg xmlns="http://www.w3.org/2000/svg" id="menu-toggler-svg" viewBox="0 0 20 20" stroke="black">
-    <line x1="1" y1="1" x2="19" y2="19" stroke-width="3"></line>
-    <line x1="1" y1="19" x2="19" y2="1" stroke-width="3"></line>
-</svg>
-        </div>
+        <svg class="header__menu-toggler" width="20px" height="20px">
+          <use xlink:href="#menu-toggler"></use>
+        </svg>
+        <svg class="header__menu-toggler--close">
+          <use xlink:href="#menu-toggler--close"></use>
+        </svg>
       </div>
       <div class="content">
         <div class="slider-wrapper">
@@ -84,22 +80,22 @@
           </div>
           <div class="slider-wrapper__contacts">
             <div class="item item--phone-wrapper">
-              <div class="item__icon item__icon--phone-icon"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;" viewBox="0 0 333 333" x="0px" y="0px" fill="#7b7b7b" clip-rule="evenodd">
-  <g>
-    <path class="fil0" d="M143 80c13,12 13,33 0,46l-13 13c18,22 42,46 64,64l14 -13c12,-13 33,-13 46,0l21 21c11,12 12,30 2,43 -5,8 -14,14 -20,21 -20,20 -60,5 -99,-24 -29,-22 -54,-46 -75,-75 -30,-40 -45,-79 -25,-99 7,-7 14,-15 22,-21 12,-10 31,-9 42,3l21 21zm-31 58l22 -22c7,-7 7,-19 0,-27l-21 -21c-7,-7 -18,-7 -26,-1 -6,5 -13,13 -19,19 -14,14 0,47 25,82 21,27 45,51 73,72 34,26 67,40 81,26 6,-6 14,-13 20,-20 6,-8 5,-19 -2,-26l-21 -21c-7,-7 -20,-7 -27,0l-22 22c-29,-23 -60,-53 -83,-83z"/>
-  </g>
-</svg>
-              </div>
-              <div class="item__text item__text--phone-discription">8 903 45 96 540   |   8 918 48 43 579
+              <svg class="item__icon item__icon--phone-icon">
+                <use xlink:href="#phone"></use>
+              </svg>
+              <div class="item__text item__text--phone-discription">
+                <a class="text__first" href="tel:89034596540">8 903 45 96 540
+                </a>
+                <span class="text__separator">|
+                </span>
+                <a class="text__second" href="tel:89184843579">8 918 48 43 579
+                </a>
               </div>
             </div>
             <div class="item item--alarm-wrapper">
-              <div class="item__icon item__icon--alarm-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" x="0px" y="0px" fill="#7d7d7d">
-    <g>
-        <path d="M26,18a10,10,0,0,0-9-9.95V6h1a1,1,0,0,0,0-2H14a1,1,0,0,0,0,2h1V8.05a10,10,0,0,0-5.76,17.3L6.29,28.29a1,1,0,0,0,1.42,1.42l3.15-3.15a9.89,9.89,0,0,0,10.28,0l3.15,3.15a1,1,0,0,0,1.42-1.42l-2.95-2.94A10,10,0,0,0,26,18ZM8,18a8,8,0,1,1,8,8A8,8,0,0,1,8,18Zm19.71-7.29a1,1,0,0,1-1.42,0l-3-3a1,1,0,0,1,1.42-1.42l3,3A1,1,0,0,1,27.71,10.71Zm-19-3-3,3A1,1,0,0,1,4.29,9.29l3-3A1,1,0,0,1,8.71,7.71ZM18.83,20.83a1,1,0,0,1-1.42,0l-2.12-2.12A1.05,1.05,0,0,1,15,18V15a1,1,0,0,1,2,0v2.59l1.83,1.82A1,1,0,0,1,18.83,20.83Z"/>
-    </g>
-</svg>
-              </div>
+              <svg class="item__icon item__icon--alarm-icon">
+                <use xlink:href="#alarm"></use>
+              </svg>
               <div class="item__text item__text--alarm-discription">Пн-Пт: 08.00 — 20.00
               </div>
             </div>
@@ -109,34 +105,24 @@
             </h1>
             <p class="image-mini__description">Вы можете заказать услугу со скидкой онлайн
             </p>
-            <div class="image-mini__arrow-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 16" stroke="#fff">
-    <line x1="2" y1="8" x2="78" y2="8" stroke-width="2"></line>
-    <polyline points="72,1 78,8 72,15" stroke-width="2" fill="none"/>
-</svg>
-            </div>
+            <svg class="image-mini__arrow-svg">
+              <use xlink:href="#arrow"></use>
+            </svg>
           </div>
           <div class="switcher">
             <div class="switcher__arrow-wrapper">
-              <svg class="switcher__arrow-up" width="16px" height="50px" stroke="#c4c4c4" version="1.1" xmlns="http://www.w3.org/2000/svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 40">
-    <line x1="8" y1="1" x2="8" y2="39" stroke-width="2"></line>
-    <polyline points="1,8 8,1 15,8" stroke-width="2" fill="none"/>
-</svg>
+              <svg class="switcher__arrow-up" width="16px" height="50px" stroke="#c4c4c4" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#arrow--short"></use>
               </svg>
             </div>
             <div class="switcher__dots-wrapper">
-              <svg class="switcher__dots" width="16px" height="145px" xmlns="http://www.w3.org/2000/svg" version="1.1" stroke="#c4c4c4" fill="#c4c4c4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 145" version="2">
-    <circle class="dot" stroke="#2d6b5f" fill="#2d6b5f" id="dot-1" cx="8" cy="10" r="7"/>
-    <circle class="dot" id="dot-2" cx="8" cy="50" r="2"/>
-    <circle class="dot" id="dot-3" cx="8" cy="95" r="2"/>
-    <circle class="dot" id="dot-4" cx="8" cy="135" r="2"/>
-</svg>
+              <svg class="switcher__dots" width="16px" height="145px" xmlns="http://www.w3.org/2000/svg" version="1.1" stroke="#c4c4c4" fill="#c4c4c4">
+                <use xlink:href="#dots"></use>
               </svg>
             </div>
             <div class="switcher__arrow-wrapper">
-              <svg class="switcher__arrow-down" width="16px" height="50px" style="transform: rotate(180deg);" stroke="#c4c4c4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 40">
-    <line x1="8" y1="1" x2="8" y2="39" stroke-width="2"></line>
-    <polyline points="1,8 8,1 15,8" stroke-width="2" fill="none"/>
-</svg>
+              <svg class="switcher__arrow-down" width="16px" height="50px" style="transform: rotate(180deg);" stroke="#c4c4c4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <use xlink:href="#arrow--short"></use>
               </svg>
             </div>
           </div>
@@ -269,10 +255,10 @@
           </h1>
           <p class="feedback__info">Оставьте заявку ниже и мы с Вами свяжемся  в близжайшее время
           </p>
-          <div class="data-wrapper">
-            <input class="feedback__text-input" placeholder="Введите Ваше имя">
-            <input class="feedback__text-input" placeholder="Введите номер телефона">
-            <button class="feedback__done-btn">
+          <form class="data-wrapper">
+            <input class="feedback__text-input" type="name" name="name" placeholder="Введите Ваше имя">
+            <input class="feedback__text-input" type="tel" name="phone" placeholder="Введите номер телефона">
+            <button class="feedback__done-btn" type="submit">
               <p class="done-btn__text">Готово
               </p>
               <div class="done-btn__arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 16" stroke="#fff">
@@ -281,7 +267,7 @@
 </svg>
               </div>
             </button>
-          </div>
+          </form>
         </div>
         <div class="contacts">
           <div class="contacts__title-wrapper">
@@ -293,29 +279,29 @@
             <div class="unsocial">
               <div class="left">
                 <div class="unsocial__item">
-                  <div class="unsocial__icon"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" fill="#2d2d2d">
-	<path d="M69.283,32.454C67.31,23.294,59.2,16.645,50,16.645c-9.199,0-17.31,6.649-19.284,15.81  c-0.728,3.377-0.767,7.125-0.119,11.457c1.325,8.88,5.126,17.317,10.767,24.269c-5.274,1.419-8.489,4.046-8.489,7.05  c0,4.556,7.522,8.125,17.125,8.125s17.125-3.569,17.125-8.125c0-2.988-3.22-5.632-8.487-7.052c5.64-6.952,9.44-15.388,10.765-24.266  C70.051,39.578,70.012,35.831,69.283,32.454z M65.125,75.23c0,2.897-6.212,6.125-15.125,6.125s-15.125-3.228-15.125-6.125  c0-2.139,3.166-4.255,7.93-5.349c1.981,2.232,4.154,4.295,6.512,6.137l0.271,0.212h0.824l0.271-0.212  c2.358-1.842,4.532-3.906,6.513-6.138C61.946,70.972,65.125,73.107,65.125,75.23z M67.425,43.616  C65.657,55.46,59.321,66.496,50,74.007c-9.321-7.511-15.657-18.547-17.425-30.391c-0.611-4.09-0.58-7.603,0.096-10.74  C34.448,24.63,41.736,18.645,50,18.645s15.552,5.985,17.328,14.231C68.005,36.012,68.036,39.526,67.425,43.616z"/><path d="M49.955,27.451c-5.079,0-9.212,4.133-9.212,9.212s4.133,9.212,9.212,9.212s9.212-4.133,9.212-9.212  S55.034,27.451,49.955,27.451z M49.955,43.876c-3.977,0-7.212-3.235-7.212-7.212s3.235-7.212,7.212-7.212s7.212,3.235,7.212,7.212  S53.932,43.876,49.955,43.876z"/>
-</svg>
-                  </div>
+                  <svg class="unsocial__icon">
+                    <use xlink:href="#location"></use>
+                  </svg>
                   <p class="unsocial__info">пр. Чекистов, 22
                   </p>
                 </div>
                 <div class="unsocial__item">
-                  <div class="unsocial__icon"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;" viewBox="0 0 333 333" x="0px" y="0px" fill="#7b7b7b" clip-rule="evenodd">
-  <g>
-    <path class="fil0" d="M143 80c13,12 13,33 0,46l-13 13c18,22 42,46 64,64l14 -13c12,-13 33,-13 46,0l21 21c11,12 12,30 2,43 -5,8 -14,14 -20,21 -20,20 -60,5 -99,-24 -29,-22 -54,-46 -75,-75 -30,-40 -45,-79 -25,-99 7,-7 14,-15 22,-21 12,-10 31,-9 42,3l21 21zm-31 58l22 -22c7,-7 7,-19 0,-27l-21 -21c-7,-7 -18,-7 -26,-1 -6,5 -13,13 -19,19 -14,14 0,47 25,82 21,27 45,51 73,72 34,26 67,40 81,26 6,-6 14,-13 20,-20 6,-8 5,-19 -2,-26l-21 -21c-7,-7 -20,-7 -27,0l-22 22c-29,-23 -60,-53 -83,-83z"/>
-  </g>
-</svg>
-                  </div>
-                  <div class="unsocial__info unsocial__info--number">8 (861) 273 61 42 8 918 48 43 579
+                  <svg class="unsocial__icon">
+                    <use xlink:href="#phone"></use>
+                  </svg>
+                  <div class="phone-wrapper">
+                    <a class="phone-wrapper__info phone-wrapper__info--number" href="tel:8(861)2736142">8 (861) 273 61 42
+                    </a>
+                    <a class="phone-wrapper__info phone-wrapper__info--number" href="tel:89184843579">8 918 48 43 579
+                    </a>
                   </div>
                 </div>
                 <div class="unsocial__item">
-                  <div class="unsocial__icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" fill="#2d2d2d"><g transform="translate(0,-952.36218)"><path class="contact-icon" d="m 16.999997,973.36216 c -4.4386,0 -7.9999997,3.7333 -7.9999997,8.2188 l 0,41.53124 c 0,4.4854 3.5613997,8.25 7.9999997,8.25 l 66.000006,0 c 4.4386,0 8,-3.7646 8,-8.25 l 0,-41.53124 c 0,-4.4855 -3.5614,-8.2188 -8,-8.2188 l -66.000005,0 z m 0,4 66.000006,0 c 0.5919,0 1.1508,0.1705 1.6562,0.4062 L 52.468798,1008.331 c -1.4774,1.4026 -3.3951,1.4027 -4.875,0 l -32.25,-30.56264 c 0.5054,-0.2357 1.0643,-0.4062 1.6562,-0.4062 z m -3.9375,3.75 22.7813,21.59384 -22.4063,22.375 c -0.2806,-0.5827 -0.4375,-1.2497 -0.4375,-1.9688 l 0,-41.53124 c 0,-0.1624 0.047,-0.3123 0.062,-0.4688 z m 73.875006,0 c 0.016,0.1565 0.062,0.3064 0.062,0.4688 l 0,41.53124 c 0,0.7087 -0.1644,1.3609 -0.4375,1.9375 l -22.343705,-22.375 22.718705,-21.56254 z m -25.625005,24.34384 21.875005,21.9062 c -0.063,0 -0.1241,0 -0.1875,0 l -66.000005,0 c -0.053,0 -0.104,0 -0.1562,0 l 21.9062,-21.875 6.0938,5.75 c 2.9023,2.7512 7.4733,2.7551 10.375,0 l 6.0937,-5.7812 z" fill="#000000" fill-opacity="1" stroke="none" marker="none" visibility="visible" display="inline" overflow="visible"/></g>
-</svg>
-                  </div>
-                  <p class="unsocial__info">dental_land@mail.ru
-                  </p>
+                  <svg class="unsocial__icon">
+                    <use xlink:href="#mail"></use>
+                  </svg>
+                  <a class="unsocial__info" href="mailto:dental_land@mail.ru">dental_land@mail.ru
+                  </a>
                 </div>
                 <button class="unsocial__button">
                   <p class="button__text">Показать на карте 
@@ -324,29 +310,25 @@
               </div>
               <div class="right">
                 <div class="unsocial__item">
-                  <div class="unsocial__icon"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" fill="#2d2d2d">
-	<path d="M69.283,32.454C67.31,23.294,59.2,16.645,50,16.645c-9.199,0-17.31,6.649-19.284,15.81  c-0.728,3.377-0.767,7.125-0.119,11.457c1.325,8.88,5.126,17.317,10.767,24.269c-5.274,1.419-8.489,4.046-8.489,7.05  c0,4.556,7.522,8.125,17.125,8.125s17.125-3.569,17.125-8.125c0-2.988-3.22-5.632-8.487-7.052c5.64-6.952,9.44-15.388,10.765-24.266  C70.051,39.578,70.012,35.831,69.283,32.454z M65.125,75.23c0,2.897-6.212,6.125-15.125,6.125s-15.125-3.228-15.125-6.125  c0-2.139,3.166-4.255,7.93-5.349c1.981,2.232,4.154,4.295,6.512,6.137l0.271,0.212h0.824l0.271-0.212  c2.358-1.842,4.532-3.906,6.513-6.138C61.946,70.972,65.125,73.107,65.125,75.23z M67.425,43.616  C65.657,55.46,59.321,66.496,50,74.007c-9.321-7.511-15.657-18.547-17.425-30.391c-0.611-4.09-0.58-7.603,0.096-10.74  C34.448,24.63,41.736,18.645,50,18.645s15.552,5.985,17.328,14.231C68.005,36.012,68.036,39.526,67.425,43.616z"/><path d="M49.955,27.451c-5.079,0-9.212,4.133-9.212,9.212s4.133,9.212,9.212,9.212s9.212-4.133,9.212-9.212  S55.034,27.451,49.955,27.451z M49.955,43.876c-3.977,0-7.212-3.235-7.212-7.212s3.235-7.212,7.212-7.212s7.212,3.235,7.212,7.212  S53.932,43.876,49.955,43.876z"/>
-</svg>
-                  </div>
+                  <svg class="unsocial__icon">
+                    <use xlink:href="#location"></use>
+                  </svg>
                   <p class="unsocial__info">ул. Старокубанская, 32
                   </p>
                 </div>
                 <div class="unsocial__item">
-                  <div class="unsocial__icon"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;" viewBox="0 0 333 333" x="0px" y="0px" fill="#7b7b7b" clip-rule="evenodd">
-  <g>
-    <path class="fil0" d="M143 80c13,12 13,33 0,46l-13 13c18,22 42,46 64,64l14 -13c12,-13 33,-13 46,0l21 21c11,12 12,30 2,43 -5,8 -14,14 -20,21 -20,20 -60,5 -99,-24 -29,-22 -54,-46 -75,-75 -30,-40 -45,-79 -25,-99 7,-7 14,-15 22,-21 12,-10 31,-9 42,3l21 21zm-31 58l22 -22c7,-7 7,-19 0,-27l-21 -21c-7,-7 -18,-7 -26,-1 -6,5 -13,13 -19,19 -14,14 0,47 25,82 21,27 45,51 73,72 34,26 67,40 81,26 6,-6 14,-13 20,-20 6,-8 5,-19 -2,-26l-21 -21c-7,-7 -20,-7 -27,0l-22 22c-29,-23 -60,-53 -83,-83z"/>
-  </g>
-</svg>
-                  </div>
-                  <p class="unsocial__info">8 903 45 96 540
-                  </p>
+                  <svg class="unsocial__icon">
+                    <use xlink:href="#phone"></use>
+                  </svg>
+                  <a class="unsocial__info unsocial__info--number" href="tel:89034596540">8 903 45 96 540
+                  </a>
                 </div>
                 <div class="unsocial__item">
-                  <div class="unsocial__icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" fill="#2d2d2d"><g transform="translate(0,-952.36218)"><path class="contact-icon" d="m 16.999997,973.36216 c -4.4386,0 -7.9999997,3.7333 -7.9999997,8.2188 l 0,41.53124 c 0,4.4854 3.5613997,8.25 7.9999997,8.25 l 66.000006,0 c 4.4386,0 8,-3.7646 8,-8.25 l 0,-41.53124 c 0,-4.4855 -3.5614,-8.2188 -8,-8.2188 l -66.000005,0 z m 0,4 66.000006,0 c 0.5919,0 1.1508,0.1705 1.6562,0.4062 L 52.468798,1008.331 c -1.4774,1.4026 -3.3951,1.4027 -4.875,0 l -32.25,-30.56264 c 0.5054,-0.2357 1.0643,-0.4062 1.6562,-0.4062 z m -3.9375,3.75 22.7813,21.59384 -22.4063,22.375 c -0.2806,-0.5827 -0.4375,-1.2497 -0.4375,-1.9688 l 0,-41.53124 c 0,-0.1624 0.047,-0.3123 0.062,-0.4688 z m 73.875006,0 c 0.016,0.1565 0.062,0.3064 0.062,0.4688 l 0,41.53124 c 0,0.7087 -0.1644,1.3609 -0.4375,1.9375 l -22.343705,-22.375 22.718705,-21.56254 z m -25.625005,24.34384 21.875005,21.9062 c -0.063,0 -0.1241,0 -0.1875,0 l -66.000005,0 c -0.053,0 -0.104,0 -0.1562,0 l 21.9062,-21.875 6.0938,5.75 c 2.9023,2.7512 7.4733,2.7551 10.375,0 l 6.0937,-5.7812 z" fill="#000000" fill-opacity="1" stroke="none" marker="none" visibility="visible" display="inline" overflow="visible"/></g>
-</svg>
-                  </div>
-                  <p class="unsocial__info">dental_land@mail.ru
-                  </p>
+                  <svg class="unsocial__icon">
+                    <use xlink:href="#mail"></use>
+                  </svg>
+                  <a class="unsocial__info" href="mailto:dental_land@mail.ru">dental_land@mail.ru
+                  </a>
                 </div>
                 <button class="unsocial__button">
                   <p class="button__text">Показать на карте 
@@ -355,9 +337,15 @@
               </div>
             </div>
             <div class="social">
-              <img class="social__item" src="assets/images/vk.png">
-              <img class="social__item" src="assets/images/fb.png">
-              <img class="social__item" src="assets/images/ig.png">
+              <a class="social__item-link" href="http://www.vk.com">
+                <img class="social__item" src="assets/images/vk.png">
+              </a>
+              <a class="social__item-link" href="http://www.facebook.com">
+                <img class="social__item" src="assets/images/fb.png">
+              </a>
+              <a class="social__item-link" href="http://www.instagramm.com">
+                <img class="social__item" src="assets/images/ig.png">
+              </a>
             </div>
           </div>
         </div>
@@ -411,5 +399,9 @@
         </p>
       </div>
     </div>
-  <script type="text/javascript" src="main.js?d4acdd1fc67fbd33cf64"></script></body>
+    <div class="map-wrapper">
+      <div class="map-container" id="map-container">
+      </div>
+    </div>
+  <script type="text/javascript" src="main.js?4f69cff78e57e53f842f"></script></body>
 </html>

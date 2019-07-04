@@ -67,7 +67,7 @@ module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    host: 'localhost',
+    host: '0.0.0.0',
     disableHostCheck: true,
     open: false,
     openPage: 'index.html'

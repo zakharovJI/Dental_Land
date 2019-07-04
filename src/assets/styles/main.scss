@@ -33,6 +33,35 @@
 }
 
 
+.map-wrapper {
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,0.2);
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+$map-width: 80vw;
+$map-height: 60vh;
+
+.map-container {
+    position: fixed;
+    width: $map-width;
+    height: $map-height;
+    justify-content: center;
+    align-items: center;
+    top: calc(50% - #{$map-height} / 2);
+    left: calc(50% - #{$map-width} / 2);
+    z-index: 101;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.5)
+}
+
+
 @media (max-width: 1250px) {
     .app {
         display: block;

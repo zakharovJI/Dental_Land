@@ -7,36 +7,42 @@
         +b('unsocial', {}, 'div')
             +b('left', {p:0})
                 +e('item', {}, 'div')
-                    +e('icon', {}, 'div')
-                        include ../../../assets/icons/location.svg
+                    +e('icon', {}, 'svg')
+                        use(xlink:href='#location')
                     +e('info', {}, 'p')= 'пр. Чекистов, 22'
                 +e('item', {}, 'div')
-                    +e('icon', {}, 'div')
-                        include ../../../assets/icons/phone.svg
-                    +e('info', 'number', {}, 'p')= '8 (861) 273 61 42 8 918 48 43 579'
+                    +e('icon', {}, 'svg')
+                        use(xlink:href='#phone')
+                    +b('phone-wrapper', {})
+                        +e('info', 'number', {}, 'a')(href='tel:8(861)2736142')= '8 (861) 273 61 42'
+                        +e('info', 'number', {}, 'a')(href='tel:89184843579')= '8 918 48 43 579'
+                    //- +e('info', 'number', {}, 'p')= '8 (861) 273 61 42 8 918 48 43 579'
                 +e('item', {}, 'div')
-                    +e('icon', {}, 'div')
-                        include ../../../assets/icons/mail.svg
-                    +e('info', {}, 'p')= 'dental_land@mail.ru'
+                    +e('icon', {}, 'svg')
+                        use(xlink:href='#mail')
+                    +e('info', {}, 'a')(href='mailto:dental_land@mail.ru')= 'dental_land@mail.ru'
                 +e('button', {}, 'button')
                     +e('text', {p:'button'}, 'p')= 'Показать на карте '
             +b('right', {p:0})
                 +e('item', {}, 'div')
-                    +e('icon', {}, 'div')
-                        include ../../../assets/icons/location.svg
+                    +e('icon', {}, 'svg')
+                        use(xlink:href='#location')
                     +e('info', {}, 'p')= 'ул. Старокубанская, 32'
                 +e('item', {}, 'div')
-                    +e('icon', {}, 'div')
-                        include ../../../assets/icons/phone.svg
-                    +e('info', {}, 'p')= '8 903 45 96 540'
+                    +e('icon', {}, 'svg')
+                        use(xlink:href='#phone')
+                    +e('info', 'number', {}, 'a')(href='tel:89034596540')= '8 903 45 96 540'
                 +e('item', {}, 'div')
-                    +e('icon', {}, 'div')
-                        include ../../../assets/icons/mail.svg
-                    +e('info', {}, 'p')= 'dental_land@mail.ru'
+                    +e('icon', {}, 'svg')
+                        use(xlink:href='#mail')
+                    +e('info', {}, 'a')(href='mailto:dental_land@mail.ru')= 'dental_land@mail.ru'
                 +e('button', {}, 'button')
                     +e('text', {p:'button'}, 'p')= 'Показать на карте '
         +b('social', {}, 'div')
-            +e('item', {}, 'img')(src='../assets/icons/vk.png')
-            +e('item', {}, 'img')(src='../assets/icons/fb.png')
-            +e('item', {}, 'img')(src='../assets/icons/ig.png')
+            +e('item-link', {}, 'a')(href='http://www.vk.com')
+                +e('item', {}, 'img')(src='../assets/icons/vk.png')
+            +e('item-link', {}, 'a')(href='http://www.facebook.com')
+                +e('item', {}, 'img')(src='../assets/icons/fb.png')
+            +e('item-link', {}, 'a')(href='http://www.instagramm.com')
+                +e('item', {}, 'img')(src='../assets/icons/ig.png')
     //- +b('navigation', {})

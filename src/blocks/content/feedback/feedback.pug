@@ -3,10 +3,10 @@
         +e('image', {}, 'img')(src='../assets/images/feedback.png')
     +e('title', {}, 'h1')= 'ОСТАЛИСЬ ВОПРОСЫ?'
     +e('info', {}, 'p')= 'Оставьте заявку ниже и мы с Вами свяжемся  в близжайшее время'
-    +b('data-wrapper', {p: 0})
-        +e('text-input', {}, 'input')(placeholder='Введите Ваше имя')
-        +e('text-input', {}, 'input')(placeholder='Введите номер телефона')
-        +e('done-btn', {}, 'button')
+    +b('data-wrapper', {p: 0}, 'form')
+        +e('text-input', {}, 'input')(type='name' name='name' placeholder='Введите Ваше имя')
+        +e('text-input', {}, 'input')(type='tel' name='phone' placeholder='Введите номер телефона')
+        +e('done-btn', {}, 'button')(type='submit')
             +e('text', {p: 'done-btn'}, 'p')= 'Готово'
             +e('arrow', {p: 'done-btn'}, 'div')
                 include ../../../assets/icons/arrow.svg

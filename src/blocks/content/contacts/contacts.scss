@@ -5,6 +5,7 @@
     width: 100vw;
     max-width: 1028px;
     margin-top: -25px;
+    text-decoration: none
 }
 
 .contact-icon {
@@ -37,6 +38,16 @@
     max-width: 1028px;
 }
 
+.social__item-link {
+    text-decoration: none;
+}
+
+.phone-wrapper {
+    display: flex;
+    flex-direction: column
+
+}
+
 .unsocial {
     display: flex;
     flex-wrap: wrap;
@@ -66,6 +77,16 @@
 
 .unsocial__info--number {
     width: 130px;
+}
+
+.phone-wrapper__info {
+    text-decoration: none;
+    color: #7b7b7b;
+}
+
+.unsocial__info {
+    text-decoration: none;
+    color: #7b7b7b;
 }
 
 .social {
@@ -100,6 +121,10 @@
     }
 }
 
+.unsocial__button--show-map {
+    display: none;
+}
+
 .button__text {
     font-family: "Gotham Pro";
     font-size: 14px;
@@ -107,6 +132,7 @@
     letter-spacing: 1px;
     margin: 0;
 }
+
 
 @media only screen and (max-width: 1010px) {
 

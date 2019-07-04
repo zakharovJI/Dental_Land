@@ -20,9 +20,12 @@ include menu-item/menu-item.pug
         
             +b('menu-wrapper__button', {}, 'button')
                     +e('text', {}, 'p')= 'Записаться на прием'
-    +b('menu-toggler', {}, 'div')
-        include ../../assets/icons/menu-toggler.svg
-    +b('menu-toggler--close', {}, 'div')
-        include ../../assets/icons/menu-toggler--close.svg
+    +e('menu-toggler', {}, 'svg')(width="20px", height="20px")
+        use(xlink:href="#menu-toggler")
+    //- +b('menu-toggler', {}, 'div')
+        //- include ../../assets/icons/menu-toggler.svg
+    +e('menu-toggler--close', {}, 'svg')
+        use(xlink:href="#menu-toggler--close")
+    //-     include ../../assets/icons/menu-toggler--close.svg
 
 

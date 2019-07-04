@@ -1,10 +1,10 @@
 $font-color: #7b7b7b;
 
 .slider-wrapper__contacts {
-    width: 340px;
     height: 90px;
     position: relative;
-    left: 688px;
+    width: max-content;
+    left: 640px;
     font-family: "Gotham Pro";
     display: flex;
     flex-direction: column;
@@ -26,11 +26,27 @@ $font-color: #7b7b7b;
 }
 
 .item__text {
+    display: flex;
     font-size: 18px;
     letter-spacing: -.7px;
     font-weight: 500;
     color: $font-color;
     padding-left: 10px;
+}
+
+.text__first {
+    text-decoration: none;
+    color: #7b7b7b;
+}
+
+.text__second {
+    text-decoration: none;
+    color: #7b7b7b;
+
+}
+
+.text__separator {
+    padding: 0 30px;
 }
 
 
@@ -41,7 +57,7 @@ $font-color: #7b7b7b;
         left: 0;
         margin: 0 auto;
         top: 70px;
-        width: 292px
+        width: max-content;
     }
 
     .item__text {
@@ -54,5 +70,6 @@ $font-color: #7b7b7b;
         width: 25px;
         height: 25px;
     }
+
 
 }

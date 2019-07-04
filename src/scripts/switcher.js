@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
         menu_item_selected = i;
     }
 
-    let $menu_toggler = document.getElementsByClassName('menu-toggler')[0];
-    let $menu_toggler__close = document.getElementsByClassName('menu-toggler--close')[0];
+    let $menu_toggler = document.getElementsByClassName('header__menu-toggler')[0];
+    let $menu_toggler__close = document.getElementsByClassName('header__menu-toggler--close')[0];
     let $header = document.getElementsByClassName('header')[0];
     console.log($menu_toggler)
 
@@ -119,6 +119,79 @@ document.addEventListener('DOMContentLoaded', () => {
 
         menu_collapsed = !menu_collapsed;
     }
+
+    let $map_buttons = document.getElementsByClassName('unsocial__button');
+    let map_showed = 0;
+    let myMap = undefined;
+
+    document.getElementsByClassName('map-wrapper')[0].onclick = (event) => {
+        document.getElementsByClassName('map-wrapper')[0].style.display = 'none';
+        
+    }
+
+    document.getElementsByClassName('map-container')[0].onclick = (event) => {
+        event.stopPropagation();
+    }
+
+
+    $map_buttons[0].onclick = () => {
+        if (myMap === undefined) {
+            ymaps.ready(init([45.028566, 38.912117]));
+            document.getElementsByClassName('map-wrapper')[0].style.display = 'flex';
+        } else {
+            myMap.setCenter([45.028566, 38.912117]);
+            document.getElementsByClassName('map-wrapper')[0].style.display = 'flex';
+        }
+    }
+
+    $map_buttons[1].onclick = () => {
+        
+        if (myMap === undefined) {
+            ymaps.ready(init([45.008234, 39.039174]));
+            document.getElementsByClassName('map-wrapper')[0].style.display = 'flex';
+        } else {
+            myMap.setCenter([45.008234, 39.039174]);
+            document.getElementsByClassName('map-wrapper')[0].style.display = 'flex';
+        }
+    }
+
+
+
+    function init(coords) {
+        console.log('Init is colled!')
+        
+        myMap = new ymaps.Map("map-container", {
+            center: coords,
+            zoom: 15
+        });
+    
+        
+        var myPlacemark = new ymaps.Placemark([45.028566, 38.912117]);
+        myMap.geoObjects.add(myPlacemark);
+        myPlacemark = new ymaps.Placemark([45.008234, 39.039174]);
+        myMap.geoObjects.add(myPlacemark);
+
+    }
+
+    document.getElementsByClassName('feedback__done-btn')[0].onclick = () => {
+        var formData = new FormData(); 
+        let $inputs = document.getElementsByClassName('feedback__text-input');
+        for(var i=0; i<$inputs.length; i++)
+        {
+            formData.append($inputs[i].name, elements[i].value);
+        }
+        var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function()
+            {
+                if(xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                {
+                    alert(xmlHttp.responseText);
+                }
+            }
+            xmlHttp.open("post", "http://mrthefirst.bget.ru/form.php"); 
+            xmlHttp.send(formData); 
+    }
+    
 
 
 
